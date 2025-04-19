@@ -16,6 +16,7 @@ export default function App() {
   const [search, setSearch] = useState('');
   const [idx, setIdx] = useState(null)
 
+
   const deleteUser = (id) => {
     setData(data.filter((user) => user.id !== id));
   };
@@ -126,13 +127,13 @@ export default function App() {
       </div>
 
 
-<div className='form-Section' >
-<select className='select-search'>
-  <option value="All">all</option>
-  <option value="true">true</option>
-  <option value="false">false</option>
-</select>
-</div>
+      <div className='form-Section' >
+        <select className='select-search'>
+          <option value="All">all</option>
+          <option value="true">true</option>
+          <option value="false">false</option>
+        </select>
+      </div>
 
 
       <div className="form-section">
@@ -151,13 +152,13 @@ export default function App() {
         {filteredData.map((user) => (
           <div key={user.id} className="user-card">
             <p className='user-Name'>
-              <strong>Name:</strong> {user.name}
+              <span>Name:</span> {user.name}
             </p>
             <p className='user-Age'>
-              <strong>Age:</strong> {user.age}
+              <span>Age:</span> {user.age}
             </p>
             <p className='user-Status'>
-              <strong>Status:</strong> {user.status ? 'active' : 'inactive'}
+              <span>Status:</span> {user.status ? 'active' : 'inactive'}
             </p>
             <button onClick={() => deleteUser(user.id)} className='button-delete'>Delete</button>
             <button onClick={() => statusFunc(user.id)} className='button-Status'> Status</button>
