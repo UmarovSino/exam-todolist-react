@@ -125,6 +125,16 @@ export default function App() {
         <button onClick={editUser} className='edit-Save'>Edit Save</button>
       </div>
 
+
+<div className='form-Section' >
+<select className='select-search'>
+  <option value="All">all</option>
+  <option value="true">true</option>
+  <option value="false">false</option>
+</select>
+</div>
+
+
       <div className="form-section">
         <input
           type="text"
